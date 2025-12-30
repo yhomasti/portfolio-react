@@ -4,11 +4,11 @@
 
 /* Global size increase for React version */
 html {
-  font-size: 127%;
+  font-size: 100%;
 }
 
 body {
-  font-size: 1.05rem; 
+  font-size: 1.00rem; 
 }
 
 /* Make specific elements bigger */
