@@ -1458,3 +1458,16 @@ nav.scrolled {
     transform: scale(1.2);
     background: rgba(255, 107, 107, 0.2);
 }
+
+/* Stack experience cards vertically - OVERRIDE GRID */
+#experience .about-containers {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+  grid-template-columns: none !important;
+}
+
+#experience .research-card {
+  width: 100% !important;
+  max-width: none !important;
+}
