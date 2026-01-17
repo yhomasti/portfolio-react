@@ -4,9 +4,9 @@ function Experience() {
       <p className="section__text__p1">Take a look at my...</p>
       <h1 className="title">Experience</h1>
       <div className="experience-details-container">
-        <div className="about-containers">
+        <div className="about-containers" style={{ display: 'flex', flexDirection: 'column', gap: '2rem', gridTemplateColumns: 'none' }}>
           
-          {/* Warner Bros Games - NEW */}
+          {/* Warner Bros Games */}
           <div className="details-container color-container research-card">
             <h2 className="experience-sub-title">Software Engineering Co-op</h2>
             <p className="experience-company">Warner Bros. Games</p>
@@ -14,26 +14,19 @@ function Experience() {
             
             <div className="research-content">
               <div className="research-left">
-                {/* Game of Thrones Conquest Background Image */}
-                <div className="article-container" style={{ position: 'relative' }}>
+                {/* Two images side by side */}
+                <div className="article-container" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                  
+                  <img 
+                    src="/assets/Warner_Bros._Discovery_logo.png"
+                    alt="Warner Bros Discovery"
+                    style={{ width: '50%', height: 'auto', objectFit: 'contain' }}
+                  />
                   <img 
                     src="/assets/WB_GoT_background.jpg" 
                     alt="Game of Thrones: Conquest"
                     className="project-img"
-                    style={{ width: '100%', height: 'auto' }}
-                  />
-                  {/* WB Discovery Logo Overlay */}
-                  <img 
-                    src="/assets/Warner_Bros._Discovery_logo.png"
-                    alt="Warner Bros Discovery"
-                    style={{
-                      position: 'absolute',
-                      bottom: '10px',
-                      right: '10px',
-                      width: '120px',
-                      height: 'auto',
-                      opacity: '0.9'
-                    }}
+                    style={{ width: '50%', height: 'auto', objectFit: 'cover' }}
                   />
                 </div>
               </div>
@@ -45,12 +38,12 @@ function Experience() {
             </div>
             
             <div className="research-meta">
-              <p><strong>Duration:</strong> January 2026 - June 2026</p>
+              <p><strong>Duration:</strong> January 2026 - May 2026</p>
               <p><strong>Company:</strong> Warner Bros. Games</p>
             </div>
           </div>
 
-          {/* AR Research - Existing */}
+          {/* AR Research */}
           <div className="details-container color-container research-card">
             <h2 className="experience-sub-title">Augmented Reality Research Assistant Co-op</h2>
             <p className="experience-company">Real-Time AR Scene Alignment</p>
@@ -60,7 +53,7 @@ function Experience() {
               <div className="research-left">
                 <div className="article-container">
                   <video className="project-video" loop muted playsInline>
-                    <source src="C:\Users\Lu\Desktop\Github\thomas-portfolio-react\public\research\Screen Recording 2025-10-20 130337.mp4" type="video/mp4" />
+                    <source src="/research/Screen Recording 2025-10-20 130337.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
