@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 function Code() {
   const [expandedDemo, setExpandedDemo] = useState(false);
+  const [expandedMaya, setExpandedMaya] = useState(false);
 
   const toggleLineartDemo = () => {
     setExpandedDemo(!expandedDemo);
@@ -21,6 +22,24 @@ function Code() {
     }
   };
 
+  const toggleMayaDemo = () => {
+    setExpandedMaya(!expandedMaya);
+    
+    if (!expandedMaya) {
+      //scroll into view when expanding
+      setTimeout(() => {
+        const mayaCard = document.querySelector('.maya-expanded-card');
+        if (mayaCard) {
+          const cardTop = mayaCard.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ 
+            top: cardTop - 150, 
+            behavior: 'smooth' 
+          });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <section id="code">
       <p className="section__text__p1">Check out my Recent...</p>
@@ -28,6 +47,47 @@ function Code() {
       
       <div className="experience-details-container">
         <div className="art-containers">
+          
+          {/* Maya Animation Offset Editor*/}
+          <div className={`details-container color-container ${expandedMaya ? 'maya-expanded-card' : ''}`}>
+            <div className="article-container">
+              <video 
+                className="project-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls={expandedMaya}
+                style={{ 
+                  cursor: expandedMaya ? 'default' : 'pointer',
+                  width: '100%'
+                }}
+                onClick={() => !expandedMaya && toggleMayaDemo()}
+              >
+                <source src="/assets/coding/Twinning Plugin Demo.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <h2 className="experience-sub-title">Maya Animation Offset Editor Plug-in</h2>
+            <p className="project-skills">Python, Maya API, PyQt5</p>
+            
+            <div className="btn-container">
+              {/* 
+              <button 
+                className="btn btn-color-2 project-btn"
+                onClick={toggleMayaDemo}
+              >
+                {expandedMaya ? 'Close Demo ✕' : 'View Demo'}
+              </button>
+              */}
+              <button 
+                className="btn btn-color-2 project-btn"
+                onClick={() => window.location.href = 'https://github.com/yhomasti'}
+              >
+                Github
+              </button>
+            </div>
+          </div>
+
           {/* Lineart Generator with Video Demo */}
           <div className={`details-container color-container ${expandedDemo ? 'expanded-card' : ''}`}>
             <div className="article-container">
@@ -97,8 +157,8 @@ function Code() {
               </button>
             </div>
           </div>
-
-          {/* FAA Bird Strikes */}
+               {/* 
+          
           <div className="details-container color-container">
             <div className="article-container">
               <img src="/assets/FAABirdStrikeDemo.png" alt="Bird Strike" className="project-img" />
@@ -114,6 +174,7 @@ function Code() {
               </button>
             </div>
           </div>
+          */}
         </div>
       </div>
     </section>
