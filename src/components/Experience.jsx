@@ -9,7 +9,7 @@ function Experience() {
           {/* Warner Bros Games */}
           <div className="details-container color-container research-card">
             <h2 className="experience-sub-title">Software Engineering Co-op</h2>
-            <p className="experience-company">Warner Bros. Games</p>
+            <p className="experience-company">Warner Bros. Discovery</p>
             <p className="project-skills">Game Development, Real-Time Systems</p>
             
             <div className="research-content">
@@ -39,7 +39,7 @@ function Experience() {
             
             <div className="research-meta">
               <p><strong>Duration:</strong> January 2026 - May 2026</p>
-              <p><strong>Company:</strong> Warner Bros. Games</p>
+              <p><strong>Company:</strong> Warner Bros. Discovery</p>
             </div>
           </div>
 
