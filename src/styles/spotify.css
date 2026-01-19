@@ -377,11 +377,14 @@
   50% { transform: translateX(-50%) translateY(-5px) scale(1.02); }
 }
 
+/*
 .section__pic-container:hover .thought-bubble {
   opacity: 0;
   transform: translateX(-50%) translateY(-20px) scale(0.8);
   pointer-events: none;
 }
+  */
+
 
 /*music waves in status*/
 .song-status {
