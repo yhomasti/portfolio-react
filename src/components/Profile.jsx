@@ -93,7 +93,7 @@ function Profile() {
               muted
               playsInline
             >
-              <source src="/assets/coding/Twinning Plugin Demo.mp4" type="video/mp4" />
+              <source src="/assets/coding/Twinning Plugin Compressed.mp4" type="video/mp4" />
             </video>
           </div>
           
@@ -105,7 +105,7 @@ function Profile() {
           onClick={() => window.location.href = '#art'}
         >
           <h3>3D Animation</h3>
-          <p className="card-subtitle">Character Animation & Storytelling</p>
+          <p className="card-subtitle">Character Animation & 3D Art</p>
           
           <div className="card-video-container">
             <video 
