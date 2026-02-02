@@ -319,95 +319,64 @@ section {
     -webkit-backface-visibility: hidden;
 }
 
-/* PROFILE SECTION */
-
-#profile {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    min-height: 80vh;
-    height: auto;
-}
-
-.section__pic-container {
-    display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-}
-
-.section__text {
-    align-self: center;
-    text-align: center;
-}
-
-.section__text p {
-    font-weight: 600;
-
-}
-
-.section__text__p1 {
-    text-align: center;
-}
-
-.section__text__p2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-}
-
-.section__text {
-    position: relative;
-}
-
-.section__text__p1 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #007BFF;
-    margin-bottom: 0.5rem;
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: slideInLeft 0.8s ease 0.2s forwards;
-}
-
-.section__text__p2 {
-    font-size: 2rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, #007BFF, #ff6600, #007BFF);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradientShift 3s ease-in-out infinite, slideInLeft 0.8s ease 0.6s both;
-    margin-bottom: 2rem;
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-
-/* WORK-FIRST PROFILE - Just Reel Cards */
+/* PROFILE SECTION - Centered Intro + Two Cards */
 
 #profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
-  height: 70vh;
+  align-items: center;
+  gap: 2.5rem;
+  height: 85vh;
   min-height: fit-content;
-  padding-top: 8vh;
+  padding-top: 4vh;
+}
+
+/* Centered Intro */
+.profile-intro-centered {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.profile-intro-centered .section__text__p1 {
+  font-size: 1.2rem;
+  color: #007BFF;
+  font-weight: 600;
+  margin: 0;
+  animation: slideInLeft 0.8s ease 0.2s forwards;
+}
+
+.profile-intro-centered .title {
+  font-size: 2.5rem;
+  margin: 0;
+  animation: smoothFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+}
+
+.profile-intro-centered .section__text__p2 {
+  font-size: 1.5rem;
+  margin: 0;
+  animation: gradientShift 3s ease-in-out infinite, slideInLeft 0.8s ease 0.6s both;
+}
+
+.profile-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.profile-actions .btn-container {
+  margin: 0;
+  animation: slideInUp 0.8s ease 1s forwards;
+}
+
+.socials-row {
+  display: flex;
+  gap: 0.8rem;
+  animation: scaleIn 0.6s ease 1.4s forwards;
 }
 
 /* Two Cards Side by Side */
@@ -415,8 +384,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1200px;
   width: 100%;
 }
 
@@ -470,7 +438,7 @@ section {
 }
 
 .profile-nav-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
   color: #333;
   font-weight: 700;
@@ -588,6 +556,24 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+
 /* Enhanced button container */
 .btn-container {
     opacity: 0;
@@ -815,17 +801,18 @@ section {
   gap: 1rem;
 }
 
+/* Make WB image spinnable */
 .about-wb-image {
   width: 100%;
   max-width: 280px;
   height: auto;
   border-radius: 50%;
-  transition: all 0.4s ease;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .about-wb-image:hover {
-  transform: scale(1.05) rotate(5deg);
+  transform: scale(1.05) rotate(360deg);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
@@ -1973,11 +1960,16 @@ nav {
   animation: smoothFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
 }
 
-.profile-intro .section__text__p2 {
-  font-size: 1.3rem; /* Reduced from 1.5rem */
+.profile-intro-centered .section__text__p2 {
+  font-size: 1.5rem;
   margin-bottom: 0;
   margin-top: 0;
   text-align: center;
+  background: linear-gradient(45deg, #007BFF, #ff6600, #007BFF);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   animation: gradientShift 3s ease-in-out infinite, slideInLeft 0.8s ease 0.6s both;
 }
 

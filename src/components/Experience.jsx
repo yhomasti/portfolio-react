@@ -32,7 +32,7 @@ function Experience() {
               </div>
               <div className="research-right">
                 <ul className="research-details">
-                  <li>Spring 2026 Software Engineer Co-op working on Game of Thrones: Conquest</li>
+                  <li>Spring 2026 Software Engineer Co-op working as part of the Developer Experience and Tooling team.</li>
                 </ul>
               </div>
             </div>

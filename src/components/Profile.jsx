@@ -9,7 +9,37 @@ function Profile() {
 
   return (
     <section id="profile">
-      {/* Just the Two Cards - TD Reel + Animation */}
+      {/* Centered Intro Text */}
+      <div className="profile-intro-centered">
+        <p className="section__text__p1">Hello! I am...</p>
+        <h1 className="title">Thomas Yi</h1>
+        <p className="section__text__p2">3D Animator & Pipeline Developer</p>
+        
+        <div className="profile-actions">
+          <button 
+            className="btn btn-color-1" 
+            onClick={() => window.location.href = '#contact'}
+          >
+            Contact
+          </button>
+          <div className="socials-row">
+            <img 
+              src="/assets/linkedin.png" 
+              alt="My LinkedIn profile"
+              className="icon" 
+              onClick={() => window.location.href = 'https://www.linkedin.com/in/yhomasti/'}
+            />
+            <img 
+              src="/assets/email.png" 
+              alt="Email me!"
+              className="icon" 
+              onClick={() => window.location.href = 'mailto:thomasyi2005@gmail.com'}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Two Cards - TD Reel + Animation */}
       <div className="profile-cards-row">
         {/* TD Demo Reel Card */}
         <div className={`profile-nav-card tech-card ${reelExpanded ? 'reel-expanded' : ''}`}>
@@ -17,7 +47,6 @@ function Profile() {
           <p className="card-subtitle">Pipeline Tools & Development</p>
           
           {!reelExpanded ? (
-            // YouTube Thumbnail
             <div className="card-video-container" onClick={toggleReel} style={{ cursor: 'pointer' }}>
               <img 
                 src="https://img.youtube.com/vi/VgLU79oU2dI/maxresdefault.jpg"
@@ -27,7 +56,6 @@ function Profile() {
               <div className="play-button-overlay">▶</div>
             </div>
           ) : (
-            // YouTube Embed
             <div className="card-youtube-embed">
               <iframe
                 width="100%"
@@ -44,15 +72,15 @@ function Profile() {
           <div className="reel-buttons">
             <button 
               className="btn btn-color-2 project-btn"
-              onClick={toggleReel}
+              onClick={(e) => { e.stopPropagation(); toggleReel(); }}
             >
               {reelExpanded ? 'Close Reel ✕' : 'Watch Reel'}
             </button>
             <button 
               className="btn btn-color-2 project-btn"
-              onClick={() => window.location.href = '#code'}
+              onClick={(e) => { e.stopPropagation(); window.location.href = '#code'; }}
             >
-              View All Projects →
+              View Projects →
             </button>
           </div>
         </div>
