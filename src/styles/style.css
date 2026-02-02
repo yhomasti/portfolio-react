@@ -1773,6 +1773,78 @@ nav {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
+/* TD Demo Reel Card Specific Styles */
+.youtube-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 123, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.card-video-container:hover .play-button-overlay {
+  background: rgba(0, 123, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.card-video-container:hover .youtube-thumbnail {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Expanded reel styles */
+.reel-expanded {
+  grid-column: 1 / -1; /* Takes full width when expanded */
+}
+
+.card-youtube-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-youtube-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+}
+
+.reel-buttons {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.reel-buttons .btn {
+  width: auto !important;
+  padding: 0.8rem 1.5rem !important;
+}
+
 .tech-card {
   border-color: #007BFF;
 }
@@ -1921,3 +1993,5 @@ nav {
   opacity: 0;
   animation: slideInUp 0.8s ease 1.2s forwards;
 }
+
+
