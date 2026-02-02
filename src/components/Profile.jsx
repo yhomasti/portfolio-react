@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-// import SpotifyPlayer from './SpotifyPlayer';
+import { useState } from 'react';
 
 function Profile() {
   const [reelExpanded, setReelExpanded] = useState(false);
@@ -10,52 +9,7 @@ function Profile() {
 
   return (
     <section id="profile">
-      {/* Top Row - Intro Text + Profile Pic */}
-      <div className="profile-top-row">
-        {/* Left - Text */}
-        <div className="profile-intro">
-          <p className="section__text__p1">Hello! I am...</p>
-          <h1 className="title">Thomas Yi</h1>
-          <p className="section__text__p2">3D Animator & Pipeline Developer</p>
-          
-          <div className="profile-actions">
-            <button 
-              className="btn btn-color-1" 
-              onClick={() => window.location.href = '#contact'}
-            >
-              Contact
-            </button>
-            <div className="socials-row">
-              <img 
-                src="/assets/linkedin.png" 
-                alt="My LinkedIn profile"
-                className="icon" 
-                onClick={() => window.location.href = 'https://www.linkedin.com/in/yhomasti/'}
-              />
-              <img 
-                src="/assets/email.png" 
-                alt="Email me!"
-                className="icon" 
-                onClick={() => window.location.href = 'mailto:thomasyi2005@gmail.com'}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Right - Profile Pic */}
-        <div className="profile-pic-section">
-          <p className="current-position">Currently: Software Engineer Intern at Warner Bros. Discovery</p>
-          <div className="section__pic-container">
-            <img 
-              src="/assets/Thats all folks-modified.png" 
-              alt="Thomas Yi profile picture" 
-              id="profile-pic" 
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Row - Two Cards Side by Side */}
+      {/* Just the Two Cards - TD Reel + Animation */}
       <div className="profile-cards-row">
         {/* TD Demo Reel Card */}
         <div className={`profile-nav-card tech-card ${reelExpanded ? 'reel-expanded' : ''}`}>
@@ -103,7 +57,7 @@ function Profile() {
           </div>
         </div>
 
-        {/* 3D Animation Card - Unchanged */}
+        {/* 3D Animation Card */}
         <div 
           className="profile-nav-card animation-card"
           onClick={() => window.location.href = '#art'}
