@@ -37,7 +37,7 @@ function Animation() {
           <AnimationCard
             title="Fire That Thing!"
             skills="Maya 2025"
-            videoSrc="/assets/3D/InitialTestRender_1.mp4"
+            videoSrc="/assets/3D/FireThatThing.mp4"
             link="/3d_animations/fireThatThing.html"  // Changed from /fireThatThing
             />
 
