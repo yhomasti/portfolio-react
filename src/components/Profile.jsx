@@ -101,7 +101,7 @@ function Profile() {
               muted
               playsInline
             >
-              <source src="/assets/3D/InitialTestRender_1.mp4" type="video/mp4" />
+              <source src="/assets/3D/FireThatThing.mp4" type="video/mp4" />
             </video>
           </div>
           
