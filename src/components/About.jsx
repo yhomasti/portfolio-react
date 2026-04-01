@@ -12,7 +12,7 @@ function About() {
             alt="Thomas Yi at Warner Bros" 
             className="about-wb-image"
           />
-          <p className="about-current-position">Currently: Software Engineer Intern at Warner Bros. Discovery</p>
+          {/* <p className="about-current-position">Currently: Software Engineer Intern at Warner Bros. Discovery</p> */}
         </div>
 
         <div className="about-bio">
