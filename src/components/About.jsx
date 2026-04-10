@@ -32,7 +32,7 @@ function About() {
             the chance to learn about the entertainment industry while picking up character animation 
             mentorship from industry professionals has been invaluable for my growth, both as a programmer and an artist. 
             I'm always looking for a chance to learn, and hope to see myself continue to 
-            grow with opportunities in the world of entertainment and animation, whether it be for a technical or creative role.
+            grow with opportunities in the world of entertainment and animation, whether I can play a technical or creative role in the pipeline.
           </p>
         </div>
       </div>
