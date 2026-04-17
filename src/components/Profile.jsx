@@ -17,7 +17,7 @@ function Profile() {
         <div className="profile-intro-centered">
           <p className="section__text__p1">Hello! I am...</p>
           <h1 className="title">Thomas Yi</h1>
-          <p className="section__text__p2">3D Animator & Technical Artist</p>
+          <p className="section__text__p2">3D Animator & Pipeline Development</p>
           
           <div className="profile-actions">
             <button 
