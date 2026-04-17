@@ -10,7 +10,7 @@ function About() {
       <div className="about-intro-section">
         <div className="about-wb-container">
           <img 
-            src={`${base}assets/Thats all folks-modified.png`}
+            src={`${base}assets/thomas-profile1-circle.png`}
             alt="Thomas Yi at Warner Bros" 
             className="about-wb-image"
           />
