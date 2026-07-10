@@ -49,7 +49,7 @@ function Profile() {
               alt="Thomas Yi at Warner Bros" 
               className="about-wb-image"
             />
-            <p className="about-current-position">Currently: Tools Programming Intern at Warner Bros. Games</p>
+            <p className="about-current-position">Previously: Tools Programming Intern at Warner Bros. Games</p>
         </div>
       </div>
 
